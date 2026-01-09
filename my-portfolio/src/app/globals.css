@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0B0F1A; /* Aseguramos que el fondo sea el que elegimos */
+  color: #E2E8F0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
