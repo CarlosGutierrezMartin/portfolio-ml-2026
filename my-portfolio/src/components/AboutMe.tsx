@@ -62,7 +62,7 @@ export const AboutMe = () => {
 
                             {/* CV Button - Animated Outline Style */}
                             <a
-                                href="/Carlos_Gutierrez_Martin_CV.pdf"
+                                href="/CV_Carlos_Gutierrez_Martin_2026.pdf"
                                 download
                                 className="relative group/cv overflow-hidden"
                             >
