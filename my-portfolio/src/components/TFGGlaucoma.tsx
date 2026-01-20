@@ -14,14 +14,11 @@ const CompareSlider = () => {
 
             {/* Background Image (Original) */}
             <div className="absolute inset-0">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                     src="/glaucoma_fundus.png"
                     alt="Fondo de Ojo Original"
-                    fill
-                    className="object-cover"
-                    priority
-                    quality={100}
-                    unoptimized
+                    className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-md border border-white/10 z-10">
                     <span className="text-xs font-mono text-white">{t('glaucoma.originalInput')}</span>
@@ -33,14 +30,11 @@ const CompareSlider = () => {
                 className="absolute inset-0 bg-black/90"
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                     src="/glaucoma_mask.png"
                     alt="Segmentación IA"
-                    fill
-                    className="object-cover opacity-90 mix-blend-screen"
-                    priority
-                    quality={100}
-                    unoptimized
+                    className="w-full h-full object-cover opacity-90 mix-blend-screen"
                 />
                 <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-md border border-green-500/30 z-10">
                     <span className="text-xs font-mono text-green-400 font-bold">{t('glaucoma.aiSegmentation')}</span>
@@ -158,15 +152,11 @@ export const GlaucomaSection = () => {
                             {/* Image Container */}
                             <div className="p-6">
                                 <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/5">
-                                    <Image
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
                                         src="/glaucoma_output.png"
                                         alt="Glaucoma Risk Analysis - AI Model Output"
-                                        width={1200}
-                                        height={800}
                                         className="w-full h-auto object-contain"
-                                        priority
-                                        quality={100}
-                                        unoptimized
                                     />
 
                                     {/* Overlay Label */}
