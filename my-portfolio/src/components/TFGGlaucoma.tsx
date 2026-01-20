@@ -108,6 +108,82 @@ export const GlaucomaSection = () => {
 
                     <CompareSlider />
                 </div>
+
+                {/* Model Output Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="mt-20"
+                >
+                    {/* Section Header */}
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="flex items-center gap-3">
+                            <span className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse" />
+                            <h3 className="text-2xl md:text-3xl font-bold text-white">
+                                {t('glaucoma.modelOutput')}
+                            </h3>
+                        </div>
+                        <div className="flex-1 h-px bg-gradient-to-r from-green-500/50 to-transparent" />
+                    </div>
+
+                    {/* Output Card */}
+                    <div className="relative group">
+                        {/* Glow Effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-teal-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 rounded-2xl border border-green-500/20 overflow-hidden">
+                            {/* Top Bar */}
+                            <div className="flex items-center justify-between px-6 py-4 bg-slate-800/50 border-b border-green-500/10">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex gap-1.5">
+                                        <span className="w-3 h-3 rounded-full bg-red-500/80" />
+                                        <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                                        <span className="w-3 h-3 rounded-full bg-green-500/80" />
+                                    </div>
+                                    <span className="text-xs font-mono text-slate-400">glaucoma_risk_analysis.py</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="px-2 py-0.5 text-[10px] font-mono bg-green-500/20 text-green-400 rounded border border-green-500/30">
+                                        AI OUTPUT
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Image Container */}
+                            <div className="p-6">
+                                <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/5">
+                                    <Image
+                                        src="/glaucoma_output.png"
+                                        alt="Glaucoma Risk Analysis - AI Model Output"
+                                        width={1200}
+                                        height={800}
+                                        className="w-full h-auto object-contain"
+                                        priority
+                                    />
+
+                                    {/* Overlay Label */}
+                                    <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-green-500/30">
+                                        <div className="flex items-center gap-2">
+                                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                                            <span className="text-sm font-mono text-green-400 font-semibold">LIVE INFERENCE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Description Box */}
+                            <div className="px-6 pb-6">
+                                <div className="p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                                    <p className="text-slate-300 text-sm leading-relaxed">
+                                        {t('glaucoma.modelOutputDesc')}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
