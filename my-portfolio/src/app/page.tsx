@@ -5,6 +5,7 @@ import HeroSection from '@/components/Hero';
 import { GlaucomaSection } from '@/components/TFGGlaucoma';
 import { TFGVideo } from '@/components/TFGVideo';
 import { ProjectSplitn } from '@/components/ProjectSplitn';
+import { ProjectTOB } from '@/components/ProjectTOB';
 import { AboutMe } from '@/components/AboutMe';
 import { CategoryTitle } from '@/components/CategoryTitle';
 import { FloatingLanguageSwitcher } from '@/components/FloatingLanguageSwitcher';
@@ -34,6 +35,8 @@ export default function Home() {
         <CategoryTitle titleKey="category.projects" />
 
         <ProjectSplitn />
+
+        <ProjectTOB />
 
         <CategoryTitle titleKey="category.tfg" />
 
